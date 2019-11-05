@@ -1,0 +1,30 @@
+language: python
+python:
+  - "3.6"
+
+services:
+  - docker
+
+install: "" # so travis doesnt do pip install requirements.txt
+
+script:
+  - docker build -t memefly_api -f Dockerfile .
+  - docker run -p 8000:8000 --name memefly_api -it --rm memefly_api
+
+before_deploy:
+  - echo "[INFO] Starting deploying"
+
+deploy:
+  provider: elasticbeanstalk
+  access_key_id: $ACCESSKEYID
+  secret_access_key:
+    secure: "$SECRETACCESSKEY"
+  region: "us-west-2"
+  app: "memefly-ds-app"
+  env: "MemeflyDsApp-env"
+  bucket_name: "elasticbeanstalk-us-west-2-812942595501"
+  on:
+    branch: api-v2
+
+after_deploy:
+  - echo "[INFO] Done deploying."

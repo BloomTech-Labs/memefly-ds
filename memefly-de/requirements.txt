@@ -1,0 +1,11 @@
+pandas
+pylint
+autopep8
+urllib3
+jupyter
+beautifulsoup4
+requests
+python-decouple
+pymongo
+dvc
+scipy

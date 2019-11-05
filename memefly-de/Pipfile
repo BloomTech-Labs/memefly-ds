@@ -1,0 +1,25 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+pandas = "*"
+pylint = "*"
+autopep8 = "*"
+urllib3 = "*"
+jupyter = "*"
+beautifulsoup4 = "*"
+requests = "*"
+python-decouple = "*"
+pymongo = "*"
+dvc = "*"
+scipy = "*"
+matplotlib = "*"
+spacy = "*"
+spacy-langdetect = "*"
+
+[requires]
+python_version = "3.7"

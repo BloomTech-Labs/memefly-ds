@@ -1,0 +1,8 @@
+.travis*
+*.log
+.git
+.gitignore
+*.sh
+cors-test
+tests
+logs

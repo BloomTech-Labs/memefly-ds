@@ -1,0 +1,2 @@
+from .cnn_rnn_merge import cnn_merge_rnn_network
+from .cnn_rnn_par_inject import cnn_par_inject_rnn_network

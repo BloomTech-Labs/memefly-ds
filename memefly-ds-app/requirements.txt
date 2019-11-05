@@ -1,0 +1,9 @@
+boto3==1.10.12
+uvicorn==0.10.4
+fastapi==0.42.0
+numpy==1.17.3
+python-dotenv==0.10.3
+python-decouple==3.1
+requests==2.22.0
+tensorflow==2.0.0
+Pillow==6.2.1

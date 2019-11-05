@@ -1,0 +1,17 @@
+name: memefly-de
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.7
+  - pandas
+  - urllib3
+  - jupyter
+  - boto3
+  - autopep8
+  - pylint
+  - requests
+  - python-decouple
+  - pymongo
+  - dvc
+prefix: /home/asura/miniconda3/envs/memefly-de
