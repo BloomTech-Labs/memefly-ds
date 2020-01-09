@@ -32,6 +32,15 @@ def probabilities_function(model: tf.keras.models, tokenizer: tf.keras.preproces
     sequence = tokenizer.texts_to_sequences([sentence])[0]
     sequence = pad_sequences([sequence], maxlen=max_length)
 
+<<<<<<< HEAD
+=======
+    #     # use np.argpartition since it runs linear time O(n)
+    #     foo = np.argpartition(next_word_prob[0], -beam_width)[-beam_width:]
+    #     foo_prob = next_word_prob[0][foo]
+    #     foo_words = tokenizer.sequences_to_texts([[i] for i in foo])
+    #     return zip(foo_prob, foo_words)
+
+>>>>>>> c3a097b... 'rc'
     next_word_prob = model.predict([img_emb, sequence], verbose=0)
     words = tokenizer.sequences_to_texts([[i] for i in range(len(next_word_prob[0]))])
     return zip(next_word_prob[0], words)

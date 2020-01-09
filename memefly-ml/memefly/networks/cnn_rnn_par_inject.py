@@ -24,6 +24,10 @@ def cnn_par_inject_rnn_network(*, vocab_size: int, maxlen: int, embedding_dim: i
                    batch_input_shape=[batch_size, None],
                    name='text_embedding')(tokenized_text_input)
     
+<<<<<<< HEAD
+=======
+    #decoder = Add()([x1, x2]) # Add doesnt train/learn after 10 epochs of 250 batch size on p3 2xlarge. change to Concat
+>>>>>>> c3a097b... 'rc'
     decoder = Concatenate(name='concat_image_text')([x1, x2])
     decoder = GRU(rnn_units, name='GRU_combined')(decoder)
     decoder = Dense(256, activation='relu', name='combined_dense')(decoder)
@@ -31,4 +35,8 @@ def cnn_par_inject_rnn_network(*, vocab_size: int, maxlen: int, embedding_dim: i
 
     model = Model(inputs=[img_emb_input, tokenized_text_input], outputs=outputs)
     
+<<<<<<< HEAD
     return model
+=======
+    return model
+>>>>>>> c3a097b... 'rc'

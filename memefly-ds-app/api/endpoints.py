@@ -69,10 +69,23 @@ async def generate_meme_text(*, mname: MemeName):
     img = await ingesting.load_img_from_url(meme_name=meme_name)
     img_emb = await preprocessing.extract_features(model=img_vec_model,
                                              img_array=img)
+<<<<<<< HEAD
     meme = inferencing.generate_text(model=text_gen_model,
                                      tokenizer=tokenizer,
                                      img_emb=img_emb,
                                      max_length=MAX_LENGTH)
+=======
+    # meme = inferencing.generate_text(model=text_gen_model,
+    #                                  tokenizer=tokenizer,
+    #                                  img_emb=img_emb,
+    #                                  max_length=MAX_LENGTH)
+    meme = await beam_search.beamsearch(beam_search.probabilities_function,
+                                  model=text_gen_model,
+                                  tokenizer=tokenizer,
+                                  img_emb=img_emb,
+                                  maxlen=MAX_LENGTH,
+                                  beam_width=1)
+>>>>>>> c3a097b... 'rc'
 
     return {'meme_url' : bounding_box[meme_name][0],
             "meme_text" : meme,

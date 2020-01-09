@@ -5,10 +5,18 @@ import time
 sys.path.append(os.path.abspath('..'))
 import numpy as np
 
+<<<<<<< HEAD
 from memefly.datasets import MemeflyDataset
 from memefly.networks import cnn_par_inject_rnn_network
 from memefly.datasets import MemeDataGenerator
 import wandb
+=======
+#from memefly.models import base_model
+from memefly.datasets import MemeflyDataset
+from memefly.networks import cnn_par_inject_rnn_network
+from memefly.datasets import MemeDataGenerator
+#import wandb
+>>>>>>> c3a097b... 'rc'
 
 class Config:
     DATA_VERSION = 'v2'
@@ -21,6 +29,10 @@ INPUT_JSON_FILE = '../datasets/combined_data.json'
 DESCRIPTION_FILE = f'../datasets/memefly-{Config.DATA_VERSION}-descriptions.txt'
 IMG_FEATURES_PKL = f'../datasets/memefly-{Config.DATA_VERSION}-features.pkl'
 
+<<<<<<< HEAD
+=======
+#Config = Config()
+>>>>>>> c3a097b... 'rc'
 dataset = MemeflyDataset(input_json_file=INPUT_JSON_FILE,
                          img_model=Config.IMAGE_MODEL_FILENAME, 
                          description_file=DESCRIPTION_FILE, 
@@ -44,10 +56,20 @@ model = image_captioning_model(vocab_size=VOCAB_SIZE,
                                rnn_units=256, 
                                batch_size=BATCH_SIZE)
 
+<<<<<<< HEAD
 wandb.init(config={"hyper": "parameter"}, project="")
 
 EPOCHS = 100
 BATCH_SIZE = 128
+=======
+# wandb.init(config={"hyper": "parameter"}, project="proj_m")
+
+EPOCHS = 2
+# BATCH_SIZE = 35 # 6GB ram max. V100 32GB p3.2xlarge can fit 250.
+
+# EPOCHS = 10
+# BATCH_SIZE = 250
+>>>>>>> c3a097b... 'rc'
 
 train_datagen = MemeDataGenerator(dataset=train_dataset, 
                                   img_embds=MEME_IMG_VEC,
@@ -80,4 +102,8 @@ model.fit_generator(train_datagen,
                     verbose=1, 
                     validation_data=val_datagen,
                     callbacks=[checkpoint])
+<<<<<<< HEAD
                     callbacks=[WandbCallback(), checkpoint])
+=======
+                    #callbacks=[WandbCallback(), checkpoint])
+>>>>>>> c3a097b... 'rc'
