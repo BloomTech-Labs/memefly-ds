@@ -70,11 +70,14 @@ async def generate_meme_text(*, mname: MemeName):
     img_emb = await preprocessing.extract_features(model=img_vec_model,
                                              img_array=img)
 <<<<<<< HEAD
+<<<<<<< HEAD
     meme = inferencing.generate_text(model=text_gen_model,
                                      tokenizer=tokenizer,
                                      img_emb=img_emb,
                                      max_length=MAX_LENGTH)
 =======
+=======
+>>>>>>> 3452575... 'rc'
     # meme = inferencing.generate_text(model=text_gen_model,
     #                                  tokenizer=tokenizer,
     #                                  img_emb=img_emb,
@@ -85,7 +88,10 @@ async def generate_meme_text(*, mname: MemeName):
                                   img_emb=img_emb,
                                   maxlen=MAX_LENGTH,
                                   beam_width=1)
+<<<<<<< HEAD
 >>>>>>> c3a097b... 'rc'
+=======
+>>>>>>> 3452575... 'rc'
 
     return {'meme_url' : bounding_box[meme_name][0],
             "meme_text" : meme,

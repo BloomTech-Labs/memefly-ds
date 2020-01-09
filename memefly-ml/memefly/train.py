@@ -6,17 +6,23 @@ sys.path.append(os.path.abspath('..'))
 import numpy as np
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 from memefly.datasets import MemeflyDataset
 from memefly.networks import cnn_par_inject_rnn_network
 from memefly.datasets import MemeDataGenerator
 import wandb
 =======
+=======
+>>>>>>> 3452575... 'rc'
 #from memefly.models import base_model
 from memefly.datasets import MemeflyDataset
 from memefly.networks import cnn_par_inject_rnn_network
 from memefly.datasets import MemeDataGenerator
 #import wandb
+<<<<<<< HEAD
 >>>>>>> c3a097b... 'rc'
+=======
+>>>>>>> 3452575... 'rc'
 
 class Config:
     DATA_VERSION = 'v2'
@@ -30,9 +36,13 @@ DESCRIPTION_FILE = f'../datasets/memefly-{Config.DATA_VERSION}-descriptions.txt'
 IMG_FEATURES_PKL = f'../datasets/memefly-{Config.DATA_VERSION}-features.pkl'
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 #Config = Config()
 >>>>>>> c3a097b... 'rc'
+=======
+#Config = Config()
+>>>>>>> 3452575... 'rc'
 dataset = MemeflyDataset(input_json_file=INPUT_JSON_FILE,
                          img_model=Config.IMAGE_MODEL_FILENAME, 
                          description_file=DESCRIPTION_FILE, 
@@ -57,11 +67,14 @@ model = image_captioning_model(vocab_size=VOCAB_SIZE,
                                batch_size=BATCH_SIZE)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 wandb.init(config={"hyper": "parameter"}, project="")
 
 EPOCHS = 100
 BATCH_SIZE = 128
 =======
+=======
+>>>>>>> 3452575... 'rc'
 # wandb.init(config={"hyper": "parameter"}, project="proj_m")
 
 EPOCHS = 2
@@ -69,7 +82,10 @@ EPOCHS = 2
 
 # EPOCHS = 10
 # BATCH_SIZE = 250
+<<<<<<< HEAD
 >>>>>>> c3a097b... 'rc'
+=======
+>>>>>>> 3452575... 'rc'
 
 train_datagen = MemeDataGenerator(dataset=train_dataset, 
                                   img_embds=MEME_IMG_VEC,
@@ -103,7 +119,11 @@ model.fit_generator(train_datagen,
                     validation_data=val_datagen,
                     callbacks=[checkpoint])
 <<<<<<< HEAD
+<<<<<<< HEAD
                     callbacks=[WandbCallback(), checkpoint])
 =======
                     #callbacks=[WandbCallback(), checkpoint])
 >>>>>>> c3a097b... 'rc'
+=======
+                    #callbacks=[WandbCallback(), checkpoint])
+>>>>>>> 3452575... 'rc'

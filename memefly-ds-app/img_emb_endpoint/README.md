@@ -1,6 +1,7 @@
 # InceptionV3 Embedding Extraction Endpoint
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 2019-12-18 - Init.
 
 ### Endpoints Usage
@@ -9,6 +10,8 @@
 curl -X POST "http://localhost:8080/invocations" -d '{"instances": [big, bad, image, array]|'
 ```
 =======
+=======
+>>>>>>> 3452575... 'rc'
 2019-12-18 - Init. Created Dockerfile and nginx.conf. Tensorflow Serving REST API uses port 8501. Sagemaker is expected to use port 8080. Thus using NGINX to tunnel external port 8080 traffic to internal 8501 traffic. Sagemaker uses /invocations and /ping endpoints. 
 
 ### Endpoints Usage
@@ -42,4 +45,7 @@ Return: Python List of length 2048. PLEASE REMEMBER TO CONVERT INTO NUMPY ARRAY.
 - Log into Docker container `docker exec -it <container id> /bin/bash`
 - Restart NGINX inside Docker `nginx -s reload`
 - Restart Docker container `docker restart <container id>`
+<<<<<<< HEAD
 >>>>>>> c3a097b... 'rc'
+=======
+>>>>>>> 3452575... 'rc'

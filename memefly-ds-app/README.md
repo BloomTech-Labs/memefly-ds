@@ -5,7 +5,10 @@
 VERSION Schema {api_version.model_version.data_version}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 3452575... 'rc'
 ## Endpoints Usage
 
 1. ROUTE: `/get-meme-names`
@@ -83,17 +86,23 @@ To test the API endpoint locally, try:
 ```curl -X POST -H "Content-Type: application/json" -d '{"meme_url": "Y-U-No"}' http://0.0.0.0:5000/```
 
 ```curl -X POST -H "Content-Type: application/json" -d '{"meme_url": "confession-kid"}' http://0.0.0.0:5000/```
+<<<<<<< HEAD
 >>>>>>> c3a097b... 'rc'
+=======
+>>>>>>> 3452575... 'rc'
 
 ## AWS Elastic Beanstalk
 
 Zip the whole directory, including Dockerfile. Upload. Ez Pz. Will break under load if being too cheap.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 # Package Directory Structure:
 ```
 =======
+=======
+>>>>>>> 3452575... 'rc'
 ## AWS Sagemaker
 
 Run Bash scripts inside img_emb_endpoint. Good luck getting around Sagemaker JSON payload limit.
@@ -104,7 +113,10 @@ Run Bash scripts inside img_emb_endpoint. Good luck getting around Sagemaker JSO
 ├── build_api_docker.sh   
 ├── run_api_docker.sh     
 ├── run.py                
+<<<<<<< HEAD
 >>>>>>> c3a097b... 'rc'
+=======
+>>>>>>> 3452575... 'rc'
 ├── api                   
 │    ├── app.py
 │    ├── endpoints.py     

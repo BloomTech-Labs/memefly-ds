@@ -41,9 +41,9 @@ To create `pipenv` or `conda` virtual environment
 
 ### Phase 3. ETL v1.1
 
-:point_right: [ ] Part 1. Adding new data from WebArchive `memegenerator.net` dataset
+:point_right: [X] Part 1. Adding new data from WebArchive `memegenerator.net` dataset
 
-:point_right: [ ] Part 2. Re-factoring ETL cleaning scripts to automatically dump it to S3 bucket and MongoDB
+:point_right: [X] Part 2. Re-factoring ETL cleaning scripts to automatically dump it to S3 bucket and MongoDB
                   -- [X] Needs MongoDB wrapper
                   -- [ ] Needs S3 wrapper
  

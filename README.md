@@ -1,6 +1,6 @@
 # Memefly
 
-You can find the project at [https://memefly.netlify.com/](https://memefly.netlify.com/).
+You can find the project at [](https://www.memeflyai.com/).
 
 ## Contributors
 
@@ -60,9 +60,11 @@ The architecture is summarized here:
 
 ![architecture](./memefly-ml/assets/par_inject_model.png)
 
-### Individual Example Outputs
+### In-sample Meme
 
 ![in-sample](./memefly-ml/assets/in.jpg)
+
+### Out-of-sample Meme
 ![out-of-sample](./memefly-ml/assets/out.jpg)
 
 ### Batch Example Outputs
