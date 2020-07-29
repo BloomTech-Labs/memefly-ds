@@ -1,5 +1,5 @@
 boto3==1.10.12
-uvicorn==0.10.4
+uvicorn==0.11.7
 fastapi==0.42.0
 numpy==1.17.3
 python-dotenv==0.10.3
