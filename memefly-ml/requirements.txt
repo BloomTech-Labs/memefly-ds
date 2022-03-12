@@ -5,7 +5,7 @@ fastapi==0.42.0
 matplotlib==3.1.1
 numpy==1.17.3
 pandas==0.25.3
-Pillow==6.2.1
+Pillow==9.0.1
 pydantic==0.32.2
 pytest==5.2.2
 python-dotenv==0.10.3
